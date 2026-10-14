@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
+app.set('trusty proxy', 1)
 const port = Number(process.env.PORT || 3000);
 const upload = multer({
   storage: multer.memoryStorage(),
